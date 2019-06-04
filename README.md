@@ -1,6 +1,10 @@
 # Miproyecto
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9 pero actualizado a la versión 8.0.0
+
+# Scripts de actualización
+npm update -g @angular/cli
+ng update --all --force
 
 ## Development server
 
