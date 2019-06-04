@@ -1,0 +1,20 @@
+<h4>Añadir tarea</h4>
+<form (submit)="addTodo()" >
+  <label for="iden">ID</label>
+  <input id="iden" type="number" [(ngModel)]="hero.id"
+         [ngModelOptions]="{standalone: true}"/>
+  <label for="name">ID</label>
+  <input id="name" type="text" [(ngModel)]="hero.name"
+         [ngModelOptions]="{standalone: true}"/>
+  <input type="submit" value="Enviar"/>
+</form>
+<h4>Value Hero: {{hero | json}}</h4>
+<h4>Value Heroes: {{heroes | json}}</h4>
+
+
+<h3>Listado de tareas</h3>
+<ul>
+  <li *ngFor="let h of heroes">
+    {{h.name}}
+  </li>
+</ul>

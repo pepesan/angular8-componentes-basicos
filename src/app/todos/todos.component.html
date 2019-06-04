@@ -1,0 +1,14 @@
+<h3>{{variable}}</h3>
+<h4>Añadir tarea</h4>
+<form (submit)="addTodo()" >
+  <input type="text" [(ngModel)]="todoText"
+         [ngModelOptions]="{standalone: true}"/>
+</form>
+<h4>Value: {{todoText}}</h4>
+
+<h3>Listado de tareas</h3>
+<ul>
+  <li *ngFor="let todo of todos">
+    {{todo.text}}
+  </li>
+</ul>
