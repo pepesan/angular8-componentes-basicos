@@ -3,7 +3,7 @@
   <label for="iden">ID</label>
   <input id="iden" type="number" [(ngModel)]="hero.id"
          [ngModelOptions]="{standalone: true}"/>
-  <label for="name">ID</label>
+  <label for="name">Nombre</label>
   <input id="name" type="text" [(ngModel)]="hero.name"
          [ngModelOptions]="{standalone: true}"/>
   <input type="submit" value="Enviar"/>
@@ -12,9 +12,9 @@
 <h4>Value Heroes: {{heroes | json}}</h4>
 
 
-<h3>Listado de tareas</h3>
+<h3>Listado de heroes</h3>
 <ul>
   <li *ngFor="let h of heroes">
-    {{h.name}}
+    {{h.name}} <button (click)="borraHeroe(h)">Borrar</button>
   </li>
 </ul>
