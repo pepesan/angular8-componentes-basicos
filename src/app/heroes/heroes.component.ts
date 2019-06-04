@@ -19,6 +19,11 @@ export class HeroesComponent implements OnInit {
     this.hero.id = 0;
     this.heroes = [];
     this.heroes.push(new Hero(1, 'Juan'));
+    // this.heroes.push(this.hero);
+  }
+
+  addHero() {
     this.heroes.push(this.hero);
+    this.hero = new Hero();
   }
 }
