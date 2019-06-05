@@ -1,0 +1,9 @@
+<h1><a href="https://angular.io/guide/reactive-forms">Guía oficial de Reactive Forms</a> </h1>
+<label>
+  Name:
+  <input type="text" [formControl]="name">
+</label>
+<p>
+  Value: {{ name.value }}
+</p>
+<button (click)="updateName()">Update</button>

@@ -1,0 +1,15 @@
+<h1><a href="https://angular.io/guide/reactive-forms">Guía oficial de Reactive Forms</a> </h1>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+
+</form>
