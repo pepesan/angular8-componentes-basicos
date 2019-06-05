@@ -1,3 +1,37 @@
+<form #estadosForm="ngForm">
+  <div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input type="text" class="form-control" id="nombre"
+           required="required"
+           [(ngModel)]="model.name" name="nombre"
+           #nombre="ngModel">
+    <div *ngIf="nombre.invalid"
+         class="alert alert-danger">
+      Invalid
+    </div>
+    <div *ngIf="nombre.valid"
+         class="alert alert-success">
+      Valid
+    </div>
+    <div *ngIf="nombre.dirty"
+         class="alert alert-danger">
+      Dirty
+    </div>
+    <div *ngIf="nombre.pristine"
+         class="alert alert-success">
+      Pristine
+    </div>
+    <div *ngIf="nombre.touched"
+         class="alert alert-danger">
+      Touched
+    </div>
+    <div *ngIf="nombre.untouched"
+         class="alert alert-success">
+      Untouched
+    </div>
+  </div>
+</form>
+
 <form (submit)="onSubmit(heroForm)" #heroForm="ngForm">
   <div class="form-group">
     <label for="name">Name</label>
