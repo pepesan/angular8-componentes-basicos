@@ -10,13 +10,18 @@ import {NgForm} from '@angular/forms';
 export class EjemploFormularioComponent implements OnInit {
   powers = ['Really Smart', 'Super Flexible',
   'Super Hot', 'Weather Changer'];
-  model = new Hero(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
+  model = new Hero(18,
+    'Dr IQ',
+    this.powers[0],
+    'Chuck Overstreet');
   heroes: Hero[] = [];
+  private submitted = false;
   constructor() { }
 
   ngOnInit() {
   }
   onSubmit(heroForm: NgForm) {
+    this.submitted = true;
     console.log(heroForm);
     if (heroForm.valid) {
       console.log(this.model);

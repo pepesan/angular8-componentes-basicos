@@ -18,14 +18,17 @@ export class UsaServicioComponent implements OnInit, OnDestroy {
       console.log(data);
       this.partidosSinObserbable = data;
     },
-      error => {throw error});
+      error => {
+      throw error;
+    });
   }
 
   ngOnInit() {
+    // Que implique reserva de memoria
   }
 
   ngOnDestroy() {
-    // Aquí deberíamos desubcribirnos
+    // Aquí deberíamos liberar memoria
   }
 
 }
