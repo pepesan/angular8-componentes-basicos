@@ -14,6 +14,8 @@ import {TodoService} from './usa-servicio/todo.service';
 import { UsaServicioComponent } from './usa-servicio/usa-servicio.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsaEventosComponent } from './usa-eventos/usa-eventos.component';
+import { EjemploFormularioComponent } from './formularios/ejemplo-formulario/ejemplo-formulario.component';
+import {EqualValidator} from './formularios/ejemplo-formulario/equal-validator.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import { UsaEventosComponent } from './usa-eventos/usa-eventos.component';
     Form4Component,
     Form5Component,
     UsaServicioComponent,
-    UsaEventosComponent
+    UsaEventosComponent,
+    EjemploFormularioComponent,
+    EqualValidator
   ],
   imports: [
     BrowserModule,
