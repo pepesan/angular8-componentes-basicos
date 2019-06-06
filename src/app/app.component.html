@@ -3,20 +3,24 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <h2>Bienvenid@s!!!</h2>
-  <app-ejemplo-formulario></app-ejemplo-formulario>
-  <!--
-    <app-form5></app-form5>
-    <app-form4></app-form4>
-    <app-form3></app-form3>
-    <app-form2></app-form2>
-    <app-form></app-form>
-    <app-heroes></app-heroes>
-    <app-todos></app-todos>
-    <app-usa-servicio></app-usa-servicio>
-    <app-usa-eventos></app-usa-eventos>
-    <app-usa-servicio></app-usa-servicio>
-  <app-usa-eventos></app-usa-eventos-->
 </div>
+<nav>
+  <ul>
+    <li><a routerLink="/home" routerLinkActive="active">Inicio</a></li>
+    <li [hidden]="oculta" (click)="cambia()" >Ejemplos
+      <ul >
+        <li><a routerLink="/formularios" >Ejemplos de Formularios</a></li>
+        <li><a routerLink="/servicios" >Ejemplos de Uso de Servicios</a></li>
+        <li><a routerLink="/componentes" >Ejemplos de Componentes</a></li>
+        <li><a routerLink="/eventos" >Ejemplos de Eventos</a></li>
+        <li><a routerLink="/reactivos" >Ejemplos de Formularios Reactivos</a></li>
+        <li><a routerLink="/crud" >Ejemplo de CRUD</a></li>
+      </ul>
+    </li>
+
+    <li><a routerLink="/about" >About</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
 
 
