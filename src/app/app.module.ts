@@ -14,8 +14,8 @@ import {TodoService} from './componentes-basicos/usa-servicio/todo.service';
 import { UsaServicioComponent } from './componentes-basicos/usa-servicio/usa-servicio.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsaEventosComponent } from './componentes-basicos/usa-eventos/usa-eventos.component';
-import { EjemploFormularioComponent } from './componentes-basicos/formularios/ejemplo-formulario/ejemplo-formulario.component';
-import {EqualValidator} from './componentes-basicos/formularios/ejemplo-formulario/equal-validator.directive';
+import { EjemploFormularioComponent } from './pages/formularios/ejemplo-formulario/ejemplo-formulario.component';
+import {EqualValidator} from './pages/formularios/ejemplo-formulario/equal-validator.directive';
 
 // Gestión de rutas
 import { RouterModule, Routes } from '@angular/router';
@@ -26,6 +26,9 @@ import { FormulariosComponent } from './pages/formularios/formularios.component'
 import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { ReactivosComponent } from './pages/reactivos/reactivos.component';
 import { CrudComponent } from './pages/crud/crud.component';
+import { MarvelComponent } from './componentes-basicos/marvel/marvel.component';
+import {MarvelService} from './componentes-basicos/marvel/marvel.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Definición de rutas
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -36,6 +39,7 @@ const routes: Routes = [
   { path: 'componentes', component: TodosComponent },
   { path: 'reactivos', component: ReactivosComponent },
   { path: 'crud', component: CrudComponent },
+  { path: 'marvel', component: MarvelComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
@@ -58,7 +62,8 @@ const routes: Routes = [
     FormulariosComponent,
     ServiciosComponent,
     ReactivosComponent,
-    CrudComponent
+    CrudComponent,
+    MarvelComponent
   ],
   imports: [
     BrowserModule,
@@ -68,9 +73,10 @@ const routes: Routes = [
     RouterModule.forRoot(
       routes,
       // { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
+    BrowserAnimationsModule
   ],
-  providers: [TodoService],
+  providers: [TodoService, MarvelService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

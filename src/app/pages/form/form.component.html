@@ -1,0 +1,49 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Create Item Form</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <!-- put the form here -->
+    <form #formulario="ngForm">
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input  matInput  placeholder="Nombre"
+                [(ngModel)]="modelo.nombre"  name="nombre"
+                required minlength="4" maxlength="20"
+                #nombre='ngModel'>
+        <div *ngIf="formulario.submitted && formulario.invalid">
+          <div [hidden]="!nombre.errors.required">
+            El Nombre no debe estar vacío
+          </div>
+          <div [hidden]="!nombre.errors.minlength">
+            El Nombre debe tener al menos 4 caracteres
+          </div>
+          <div [hidden]="!nombre.errors.maxlength">
+            El Nombre debe tener menos de 20 caracteres
+          </div>
+        </div>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Diputados</mat-label>
+        <input  matInput  placeholder="Número Dipus" type="number"
+                [(ngModel)]="modelo.dipu"  name="dipu"
+                required  #dipu='ngModel'>
+        <div *ngIf="formulario.submitted && formulario.invalid">
+          <div [hidden]="!dipu.errors.required">
+            El Número de diputados no debe estar vacío
+          </div>
+        </div>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Imagen</mat-label>
+        <input  matInput  placeholder="Imagen" type="text"
+                [(ngModel)]="modelo.imagen"  name="imagen"
+               >
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button  mat-raised-button (click)="save()"  color="primary">Save</button>
+  </mat-card-actions>
+</mat-card>

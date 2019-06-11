@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Hero} from '../../entities/hero';
+import {Hero} from '../../../componentes-basicos/entities/hero';
 import {NgForm} from '@angular/forms';
 
 @Component({

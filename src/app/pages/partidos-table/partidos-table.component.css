@@ -1,0 +1,31 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.example-header {
+  min-height: 64px;
+  padding: 8px 24px 0;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-table {
+  overflow: auto;
+}
+
+.mat-row:nth-child(even){
+  background-color:rgb(250, 212, 212)
+}
+
+.mat-row:nth-child(odd){
+  background-color:rgb(247, 241, 241)
+}
+
+.encabezado{
+  background-color: lightcoral;
+}
