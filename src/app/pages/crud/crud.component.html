@@ -1,0 +1,20 @@
+<h2>Página CRUD</h2>
+<div [hidden]="ocultaForm">
+  <form>
+    <input /><input type="submit"/>
+  </form>
+  <button (click)="showListado()">Volver</button>
+</div>
+<div [hidden]="ocultaListado">
+  <button (click)="showForm()">Añadir</button>
+  <ul>
+    <li>
+      Elemento <button (click)="showDetalle()">Show</button>
+    </li>
+  </ul>
+</div>
+
+<div [hidden]="ocultaDetalle">
+  <h2>Área de Detalle</h2>
+  <button (click)="showListado()">Volver</button>
+</div>
