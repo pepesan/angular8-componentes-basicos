@@ -26,6 +26,8 @@ import { FormulariosComponent } from './pages/formularios/formularios.component'
 import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { ReactivosComponent } from './pages/reactivos/reactivos.component';
 import { CrudComponent } from './pages/crud/crud.component';
+import {MarvelComponent} from './componentes-basicos/marvel/marvel.component';
+import {MarvelService} from './componentes-basicos/marvel/marvel.service';
 // Definición de rutas
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -58,7 +60,8 @@ const routes: Routes = [
     FormulariosComponent,
     ServiciosComponent,
     ReactivosComponent,
-    CrudComponent
+    CrudComponent,
+    MarvelComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +73,7 @@ const routes: Routes = [
       // { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [TodoService],
+  providers: [TodoService, MarvelService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
