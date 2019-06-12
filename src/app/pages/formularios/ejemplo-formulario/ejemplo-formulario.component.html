@@ -106,11 +106,11 @@
            required="required" appValidateEqual="password"
            #repeatPassword="ngModel">
   </div>
-  <div *ngIf="repeatPassword.errors?.required && repeatPassword.dirty"
+  <div *ngIf="repeatPassword.errors?.required && repeatPassword.touched "
        class="alert alert-danger">
     La contraseña es obligatoria
   </div>
-  <div *ngIf="repeatPassword.errors?.appValidateEqual && email.dirty"
+  <div *ngIf="repeatPassword.errors?.appValidateEqual && repeatPassword.touched"
        class="alert alert-danger">
     La contraseña no coincide
   </div>
