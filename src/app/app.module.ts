@@ -14,8 +14,8 @@ import {TodoService} from './componentes-basicos/usa-servicio/todo.service';
 import { UsaServicioComponent } from './componentes-basicos/usa-servicio/usa-servicio.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsaEventosComponent } from './componentes-basicos/usa-eventos/usa-eventos.component';
-import { EjemploFormularioComponent } from './componentes-basicos/formularios/ejemplo-formulario/ejemplo-formulario.component';
-import {EqualValidator} from './componentes-basicos/formularios/ejemplo-formulario/equal-validator.directive';
+import { EjemploFormularioComponent } from './pages/formularios/ejemplo-formulario/ejemplo-formulario.component';
+import {EqualValidator} from './pages/formularios/ejemplo-formulario/equal-validator.directive';
 
 // Gestión de rutas
 import { RouterModule, Routes } from '@angular/router';
@@ -26,6 +26,11 @@ import { FormulariosComponent } from './pages/formularios/formularios.component'
 import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { ReactivosComponent } from './pages/reactivos/reactivos.component';
 import { CrudComponent } from './pages/crud/crud.component';
+import {AnidadosModule} from './componentes-avanzados/anidados/anidados.module';
+import {ServiceSharedModule} from './componentes-avanzados/service-shared/service-shared.module';
+import {SharedDataModule} from './componentes-avanzados/shared-data/shared-data.module';
+import {ViewChildSharedModule} from './componentes-avanzados/view-child-shared/view-child-shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Definición de rutas
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -68,7 +73,12 @@ const routes: Routes = [
     RouterModule.forRoot(
       routes,
       // { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
+    AnidadosModule,
+    ServiceSharedModule,
+    SharedDataModule,
+    ViewChildSharedModule,
+    BrowserAnimationsModule
   ],
   providers: [TodoService],
   bootstrap: [AppComponent]
