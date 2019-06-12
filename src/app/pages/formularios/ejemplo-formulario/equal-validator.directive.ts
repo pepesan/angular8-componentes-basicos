@@ -19,7 +19,7 @@ export class EqualValidator implements Validator {
 
     // value not equal
     if (e && v !== e.value) return {
-      appValidateEqual: false
+      appValidateEqual: true
     };
     return null;
   }
