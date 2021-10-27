@@ -15,7 +15,7 @@ export class EjemploFormularioComponent implements OnInit {
     this.powers[0],
     'Chuck Overstreet');
   heroes: Hero[] = [];
-  private submitted = false;
+  public submitted = false;
   constructor() { }
 
   ngOnInit() {

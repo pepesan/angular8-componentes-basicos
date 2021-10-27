@@ -29,4 +29,7 @@ export class Form4Component implements OnInit {
     console.warn(this.profileForm.value);
   }
 
+  updateProfile() {
+
+  }
 }

@@ -37,4 +37,7 @@ export class Form5Component implements OnInit {
     console.warn(this.profileForm.value);
   }
 
+  updateProfile() {
+
+  }
 }
